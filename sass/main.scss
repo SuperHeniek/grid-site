@@ -339,13 +339,33 @@ h1.company-name {
 			font-weight: bold;
 			cursor: pointer;
 			transition: background-color 0.3s, color 0.3s;
-			
+
 			&:hover {
 				color: $red;
 				background-color: $gold;
 			}
 		}
 	}
+}
+.gallery{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	img{
+		height: 300px;
+		width: 100%;
+		object-fit: cover;
+
+		&:nth-child(odd){
+			display: none
+		}
+	}
+}
+
+.footer{
+	padding: 3em 1em;
+	border-top: 1px solid $darker;
+	text-align: center;
 }
 @import './small';
 @import './medium';
