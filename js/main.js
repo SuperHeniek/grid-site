@@ -12,6 +12,11 @@ const handleNav = () => {
 			navMobile.classList.remove('nav-mobile--active');
 		});
 	});
+	allNavItems.forEach((item) => {
+		item.addEventListener('click', () => {
+			navBtn.classList.remove('is-active');
+		});
+	});
 };
 
 navBtn.addEventListener('click', handleNav);
@@ -21,4 +26,3 @@ const handleCurrentYear = () => {
 	footerYear.innerHTML = year;
 };
 handleCurrentYear();
-navBtn.addEventListener('click', handleNav);
